@@ -141,7 +141,7 @@ else:
 '''
 
 # 13. Añadir al ejercicio anterior que nos diga por cual de los cuatro es divisible (hay que decir todos por los que es divisible)
-
+'''
 num = int(input("Ingrese un numero: "))
 divisores = [2,3,5,7]
 cantDivisores = 0
@@ -154,8 +154,14 @@ for i in divisores:
         cantDivisores += 1
 if cantDivisores==0:
     print("%d no es divisible por 2,3,5 o 7" %num)
-  
+'''
 
 # 14. Escribir un programa que escriba en pantalla los divisores de un número dado
 
+num = int(input("Ingrese un numero entero: "))
+for i in range(1,num,1):    
+    if num%i==0:
+        print(i)
+
 # 15. Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+
