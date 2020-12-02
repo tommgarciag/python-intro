@@ -157,11 +157,123 @@ if cantDivisores==0:
 '''
 
 # 14. Escribir un programa que escriba en pantalla los divisores de un número dado
-
+'''
 num = int(input("Ingrese un numero entero: "))
-for i in range(1,num,1):    
+for i in range(1,num+1,1):    
     if num%i==0:
         print(i)
-
+'''
 # 15. Escribir un programa que escriba en pantalla los divisores comunes de dos números dados
+'''
+num1 = int(input("Ingrese un numero entero: "))
+num2 = int(input("Ingrese un segundo numero entero: "))
+divisoresNum1 = []
+divisoresNum2 = []
+divisoresComunes = []
 
+for i in range(1,num1+1,1):
+    if num1%i==0:
+        divisoresNum1.append(i)
+
+for i in range(1,num2+1,1):
+    if num2%i==0:
+        divisoresNum2.append(i)
+
+for i in divisoresNum1:
+    for x in divisoresNum2:
+        if i==x:
+            divisoresComunes.append(i)
+
+
+print(divisoresNum1)
+print(divisoresNum2)
+
+print("Los divisores comunes entre", num1, "y", num2, "son", divisoresComunes)
+'''
+# 16. Escribir un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número que no sea él mismo o la unidad)
+'''
+def esPrimo(num):    
+    if num<2:        
+        return False
+        
+
+    for i in range(2,num):
+        if num%i==0:            
+            return False
+
+    return True
+
+
+numero = int(input("Ingrese un numero entero: "))
+if esPrimo(numero)==True:
+    print("%d ES un numero primo" %numero)
+else:
+    print("%d NO ES un numero primo" %numero)
+'''
+# 17. Pide la edad y si es mayor de 18 años indica que ya puede conducir
+'''
+edad = int(input("Que edad tenes? "))
+if edad>=18:
+    print("Ya puede conducir.")
+else:
+    print("No puede conducir. Debes ser mayor de 18 años.")
+'''
+# 18. Pide una nota (número). Muestra la calificación según la nota:
+'''
+• 0-3: Muy deficiente
+• 3-5: Insuficiente
+• 5-6: Suficiente
+• 6-7: Bien
+• 7-9: Notable
+• 9-10: Sobresaliente
+'''
+# 20. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión
+
+# 21. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+
+# 22. Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de indentidad).
+'''
+El algoritmo para calcular la letra del dni es el siguiente :
+• El número debe ser entre 0 y 99999999
+• Debemos calcular el resto de la división entera entre el número y el número 23.
+• Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes: (T, R, W, A, G,
+M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+• Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+• Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
+'''
+
+# 23. Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
+'''
+1
+22
+333
+4444
+55555
+666666
+…….
+'''
+# 24) Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario de la siguiente forma : (suponiendo que indica 6).
+'''
+666666
+55555
+4444
+333
+22
+1
+'''
+# 25. Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) :
+
+## 26. Un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+'''
+1
+2
+3
+4 (Múltiplo de 4)
+5-
+————————————————————-
+6
+7
+8 (Múltiplo de 4)
+9 (Múltiplo de 9)
+10
+'''
