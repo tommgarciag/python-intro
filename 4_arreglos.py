@@ -149,3 +149,10 @@ arr = [4,5,2,15]
 suma = sumar(len(arr),arr)
 print("La suma de los elementos del vector es: %d" %suma)
 '''
+
+x = lambda a : a + 10
+
+print(x(5))
+
+x = lambda a, b : a * b
+print(x(5, 6))
