@@ -1,3 +1,6 @@
+# Ejercicios Adicionales Python.
+
+
 # 1. Escribe un programa que muestra por pantalla "Hello World".
 #print('"Hello World"')
 
@@ -227,9 +230,40 @@ else:
 • 7-9: Notable
 • 9-10: Sobresaliente
 '''
+
+'''
+nota = float(input("Ingrese la nota: "))
+if nota>0 and nota<=3:
+    print("Muy deficiente")
+elif nota>3 and nota<=5:
+    print("Insuficiente")
+elif nota>5 and nota<=6:
+    print("Suficiente")
+elif nota>6 and nota<=7:
+    print("Bien")
+elif nota>7 and nota<=9:
+    print("Notable")
+elif nota>9 and nota<10:
+    print("Sobresaliente")
+'''
+
 # 20. Realiza un script que pida cadenas de texto hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión
 
+'''
+arr = []
+texto = ""
+
+while texto!="cancelar":
+    texto = input("Ingrese una cadena de texto: ")
+    arr.append(texto)
+
+for i in arr:   
+    print(i, end="-")
+
+'''
+
 # 21. Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+
 
 # 22. Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de indentidad).
 '''
