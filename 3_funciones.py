@@ -70,7 +70,7 @@ def potencia(m,n):
     return p
 
 # Programa principal
-
+'''
 for i in range(0,10,1):
     if i==0:
         a=1
@@ -79,7 +79,7 @@ for i in range(0,10,1):
         a=potencia(2,i)
         b=potencia(3,i)
     print("\t", i,a,b)
-
+'''
 # Funciones Recursivas
 
 # factorial
@@ -101,3 +101,32 @@ def factorialRecursivo(n):
 print(factorialRecursivo(5))
 '''
 # Hacer Ejercicio Fibonnaci
+
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=" ")
+        a,b = b, a+b
+    print()
+
+# fib(2000)
+
+# Argumentos con valores por omision: 
+
+def pedir_confirmacion(prompt, reintentos=4, queja="Si o no, por favor."):
+    while True:
+        ok = input(prompt)
+        if ok in ("s","S","si","Si","SI"):
+            return True
+        if ok in ("n","N","no","No","NO"):
+            return False
+        reintentos = reintentos -1
+        if reintentos < 0:
+            raise OSError("Usuario duro")
+        print(queja)
+
+# Esta funcion puede ser llamada de distintas maneras
+
+# pedir_confirmacion("Realmente quieres salir? ")
+# pedir_confirmacion("¿Sobreescribir archivo? ", 2)
+# pedir_confirmacion("¿Sobreescribir archivo?", 2, "Vamos, solo si o no.")

@@ -3,20 +3,49 @@
 
 # 30. Escribir funciones que dada una cadena de caracteres:
 
+'''
+
 # a) Imprima los dos primeros caracteres.
 
-# b) Imprima los tres últimos caracteres.
+def imprimirDos(cadena):
+    print(cadena[0:2])
 
+cadena = input("Ingrese una cadena de caracteres: ")
+imprimirDos(cadena)
+
+# b) Imprima los tres últimos caracteres.
+def imprimirUltimosTres(cadena):
+    print(cadena[-3:])
+
+imprimirUltimosTres(cadena)
 # c) Imprima dicha cadena cada dos caracteres. Ej.: 'recta' debería imprimir 'rca'
+
+def impririCadaDos(cadena):
+    print(cadena[::2])
+
+impririCadaDos(cadena)
 
 # d) Dicha cadena en sentido inverso. Ej.: 'hola mundo!' debe imprimir '!odnum aloh'
 
+def stringReverse(cadena):
+    print(cadena[::-1])
+
+stringReverse(cadena)
+
 # e) Imprima la cadena en un sentido y en sentido inverso. Ej: 'reflejo' imprime 'reflejoojelfer'.
 
+def imprimirCadenaDosSentidos(cadena):
+    print(cadena + cadena[::-1])
+
+imprimirCadenaDosSentidos(cadena)
+
+'''
 
 # 31. Escribir funciones que dada una cadena y un caracter:
 
 # a) Inserte el caracter entre cada letra de la cadena. Ej: 'separar' y ',' debería devolver 's,e,p,a,r,a,r'
+
+
 
 # b) Reemplace todos los espacios por el caracter. Ej: 'mi archivo de texto.txt' y '_' debería devolver 'mi_archivo_de_texto.txt'
 
